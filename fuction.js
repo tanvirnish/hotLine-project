@@ -1,3 +1,27 @@
+// LIKE BUTTON START
+const likeCounter = document.getElementById("like-btn");
+const likeBtns = document.getElementsByClassName("like-btn");
+let likeCount = 0; 
+for (let btn of likeBtns) {
+    btn.addEventListener("click", function () {
+        likeCount++;
+        likeCounter.textContent = likeCount;
+    }); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // CALL BUTTON  START 
