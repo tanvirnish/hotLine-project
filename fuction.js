@@ -9,19 +9,26 @@ for (let btn of likeBtns) {
     }); 
 }
 
+// COPY BUTTON START
 
+ const copyBtns = document.getElementsByClassName("copy-btn");
+  const copyCounter = document.getElementById("copy-btn"); 
+  let copyCount = 0;
 
+  for (let btn of copyBtns) {
+    btn.addEventListener("click", function () {
+      const card = btn.closest(".card");
+      const numText = card.querySelector(".num").innerText; 
 
-
-
-
-
-
-
-
-
-
-
+    //   COPY NUMBER CODE START
+      navigator.clipboard.writeText(numText).then(() => {
+        alert(`📋 Number Copied: ${numText}`);
+      });
+    //   COPY NUMBER CODE END
+      copyCount++;
+      copyCounter.textContent = copyCount;
+    });
+  }
 
 
 // CALL BUTTON  START 
